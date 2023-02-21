@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family= Raleway"
+      rel="stylesheet"
+    />
+    <style type="text/css">
+      body {
+        font-family: "Montserrat", "游ゴシック体", "Yu Gothic",
+          "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", Osaka,
+          "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
+
+        
+      }
+      .navbar-custom {
+        background-color: #a8d0e6;
+        color: #fff;
+        font-family: Raleway, sans-serif;
+        font-weight: 800;
+      }
+      .navbar-custom .navbar-toggle .icon-bar {
+        background-color: #fff;
+      }
+      .navbar-custom .navbar-nav > li > a {
+        color: #fff;
+      }
+      .navbar-custom .nav li.active,
+      .navbar-custom .nav li a:hover,
+      .navbar-custom .nav li a:focus,
+      .navbar-custom .navbar-nav > li.active a {
+        color: #5892bd;
+      }
+
+      h2 {
+        margin: 0 0 4px;
+      }
+
+      .sitename a {
+        background-color: #a8d0e6;
+      }
+
+      .pfblock-title {
+        font-size: 30px;
+        font: 700 40px/1.2 "Raleway", sans-serif;
+        font-family: "Raleway", sans-serif;
+        letter-spacing: 5px;
+        text-align: center;
+        color: #222;
+      }
+
+      .pfblock-subtitle {
+        font-family: "Raleway", sans-serif;
+        letter-spacing: 5px;
+        text-align: center;
+        color: #222;
+      }
+
+      .pfblock {
+        padding: 120px 0 100px;
+        padding-top: 120px;
+        padding-right: 0px;
+        padding-bottom: 100px;
+        padding-left: 0px;
+      }
+      
+
+      .row.creator-list {
+        width: 920px;
+        margin: 0 auto;
+        margin-top: 0px;
+        margin-right: auto;
+        margin-bottom: 0px;
+        margin-left: auto;
+      }
+
+      .card {
+        margin-left: 20px;
+        margin-bottom: 30px;
+      }
+
+      a:hover {
+        text-decoration: none;
+        color: #1082e4;
+      }
+
+      .gradation {
+        background: linear-gradient(-135deg, #a6c0fe, #f68084) fixed;
+      }
+      .row.w-920 {
+        width: 920px;
+        margin: 0 auto;
+      }
+      .row.w-620 {
+        width: 620px;
+        margin: 0 auto;
+      }
+      .row.creator-list {
+        width: 920px;
+        margin: 0 auto;
+      }
+      .row.news-list {
+        width: 920px;
+        margin: 0 auto;
+      }
+      .c-image {
+        background: #fff;
+        border: 4px solid #fff;
+        position: relative;
+        -webkit-border-radius: 4px;
+        -moz-border-radius: 4px;
+        -o-border-radius: 4px;
+        border-radius: 4px;
+        -webkit-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2);
+        -moz-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
+        -o-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
+        box-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
+        zoom: 1px;
+        margin: 0 0 60px;
+      }
+      .c-description {
+        margin: 0 0 60px;
+      }
+      .b-font {
+        font-weight: bold;
+      }
+      .pad0 {
+        padding: 0;
+      }
+      .top-img {
+        text-align: center;
+        background: repeating-linear-gradient(
+          -55deg,
+          #fff,
+          #fff 1px,
+          rgba(218, 231, 234, 0.8) 2px,
+          rgba(241, 255, 255, 0.62) 3px
+        );
+      }
+      .gradation {
+        background: linear-gradient(-135deg, #a6c0fe, #f68084) fixed;
+      }
+      .white {
+        color: #fff;
+      }
+      .n-image {
+        width: 500px;
+      }
+    </style>
+
+    <title>Hello, world!</title>
+  </head>
+  <body>
+    <!--navbarここから-->
+
+    <div class="navbar-header mb-3 sticky-top" id="header">
+        
+      <nav
+        class="navbar navbar-expand-lg navbar-light ms-auto"
+        style="background-color: #a8d0e6"
+      >
+        <div class="container">
+          <a class="navbar-brand" href="#">MAKEY</a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarNav"
+            aria-controls="navbarNav"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav text ms-auto">
+              <li class="nav-item">
+                <a class="nav-link" href="#">HOME</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#creators">CREATORS</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#news">NEWS</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#contact">CONTACT</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#recruit">RECRUIT</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#profile">PROFILE</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </div>
+    <!--navbarここまで-->
+
+    <!--top画像ここから-->
+    <section id="top" class="top-img" style="text-align: center">
+      <img src="https://makey.co.jp/assets/images/top0303.jpg" alt="top" />
+    </section>
+    <!--top画像ここまで-->
+
+    <!--creatorここから-->
+    <section id="creators" class="pfblock">
+      <div class="container">
+        <div class="mx-auto" style="width: 200px">
+          <h2 class="pfblock-title">CREATORS</h2>
+          <div class="pfblock-subtitle">クリエイター</div>
+        </div>
+      </div>
+
+      <div class="row creator-list pfblock">
+        <div class="col-xs-6 col-sm-3 col-md-3 p-0">
+          <div class="col">
+            <div class="card h-100">
+              <img
+                src="https://makey.co.jp/assets/images/c_kobashiri0302.jpg"
+                class="card-img-top"
+                alt="..."
+              />
+              <div class="card-body">
+                <h5 class="card-title">Card title</h5>
+                <p class="card-text">This is a short card.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-xs-6 col-sm-3 col-md-3 p-0">
+          <div class="col">
+            <div class="card h-100">
+              <img
+                src="https://makey.co.jp/assets/images/c_kobashiri0302.jpg"
+                class="card-img-top"
+                alt="..."
+              />
+              <div class="card-body">
+                <h5 class="card-title">Card title</h5>
+                <p class="card-text">This is a short card.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-xs-6 col-sm-3 col-md-3 p-0">
+          <div class="col">
+            <div class="card h-100">
+              <img
+                src="https://makey.co.jp/assets/images/c_kobashiri0302.jpg"
+                class="card-img-top"
+                alt="..."
+              />
+              <div class="card-body">
+                <h5 class="card-title">Card title</h5>
+                <p class="card-text">This is a short card.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-xs-6 col-sm-3 col-md-3 p-0">
+          <div class="col">
+            <div class="card h-100">
+              <img
+                src="https://makey.co.jp/assets/images/c_kobashiri0302.jpg"
+                class="card-img-top"
+                alt="..."
+              />
+              <div class="card-body">
+                <h5 class="card-title">Card title</h5>
+                <p class="card-text">This is a short card.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-xs-6 col-sm-3 col-md-3 p-0">
+          <div class="col">
+            <div class="card h-100">
+              <img
+                src="https://makey.co.jp/assets/images/c_kobashiri0302.jpg"
+                class="card-img-top"
+                alt="..."
+              />
+              <div class="card-body">
+                <h5 class="card-title">Card title</h5>
+                <p class="card-text">This is a short card.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-xs-6 col-sm-3 col-md-3 p-0">
+          <div class="col">
+            <div class="card h-100">
+              <img
+                src="https://makey.co.jp/assets/images/c_kobashiri0302.jpg"
+                class="card-img-top"
+                alt="..."
+              />
+              <div class="card-body">
+                <h5 class="card-title">Card title</h5>
+                <p class="card-text">This is a short card.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-xs-6 col-sm-3 col-md-3 p-0">
+          <div class="col">
+            <div class="card h-100">
+              <img
+                src="https://makey.co.jp/assets/images/c_kobashiri0302.jpg"
+                class="card-img-top"
+                alt="..."
+              />
+              <div class="card-body">
+                <h5 class="card-title">Card title</h5>
+                <p class="card-text">This is a short card.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-xs-6 col-sm-3 col-md-3 p-0">
+          <div class="col">
+            <div class="card h-100">
+              <img
+                src="https://makey.co.jp/assets/images/c_kobashiri0302.jpg"
+                class="card-img-top"
+                alt="..."
+              />
+              <div class="card-body">
+                <h5 class="card-title">Card title</h5>
+                <p class="card-text">This is a short card.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!--creatorここまで-->
+
+    <!--提携creatorここから-->
+    <section id="creators" class="pfblock">
+      <div class="container">
+        <div class="mx-auto" style="width: 200px">
+          <h2 class="pfblock-title">ALLIANCE CREATORS</h2>
+          <div class="pfblock-subtitle">提携クリエイター</div>
+        </div>
+      </div>
+
+      <div class="row creator-list pfblock">
+        <div class="col-xs-6 col-sm-3 col-md-3 p-0">
+          <div class="col">
+            <div class="card h-100">
+              <img
+                src="https://makey.co.jp/assets/images/c_kobashiri0302.jpg"
+                class="card-img-top"
+                alt="..."
+              />
+              <div class="card-body">
+                <h5 class="card-title">Card title</h5>
+                <p class="card-text">This is a short card.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-xs-6 col-sm-3 col-md-3 p-0">
+          <div class="col">
+            <div class="card h-100">
+              <img
+                src="https://makey.co.jp/assets/images/c_kobashiri0302.jpg"
+                class="card-img-top"
+                alt="..."
+              />
+              <div class="card-body">
+                <h5 class="card-title">Card title</h5>
+                <p class="card-text">This is a short card.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-xs-6 col-sm-3 col-md-3 p-0">
+          <div class="col">
+            <div class="card h-100">
+              <img
+                src="https://makey.co.jp/assets/images/c_kobashiri0302.jpg"
+                class="card-img-top"
+                alt="..."
+              />
+              <div class="card-body">
+                <h5 class="card-title">Card title</h5>
+                <p class="card-text">This is a short card.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!--提携creatorここまで-->
+
+    <section class="pfblock gradation">
+      <div class="container">
+        
+          <div class="center-block">
+            <div class="pfblock-header creator-entry">
+              <h2 class="pfblock-title white">新規クリエイター募集</h2>
+              <div class="pfblock-subtitle white">
+                MAKEY(メイキー)は、女性の美容系クリエイターをメインにサポートしている<br>YouTuberプロダクションです。
+                YouTubeでの活動をメインに、<br>クリエイターに合わせた活動を総合的にサポートします。
+                <a class="button-more b-entry" href="/creator-entry">
+                  応募ページはこちら &gt;
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      
+    </section>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- Option 2: Separate Popper and Bootstrap JS -->
+    <!--
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+    -->
+  </body>
+</html>
