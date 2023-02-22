@@ -21,8 +21,6 @@
         font-family: "Montserrat", "游ゴシック体", "Yu Gothic",
           "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", Osaka,
           "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
-
-        
       }
       .navbar-custom {
         background-color: #a8d0e6;
@@ -74,7 +72,6 @@
         padding-bottom: 100px;
         padding-left: 0px;
       }
-      
 
       .row.creator-list {
         width: 920px;
@@ -157,6 +154,64 @@
       .n-image {
         width: 500px;
       }
+
+      .c-bnr.bg {
+        position: relative;
+        overflow: hidden;
+      }
+      .c-bnr.bg::before,
+      .c-bnr.bg::after {
+        content: "";
+        display: block;
+        position: absolute;
+        margin: auto;
+        top: 0;
+        left: 0;
+        margin: auto;
+        transition: 0.3s cubic-bezier(0.45, 0, 0.55, 1);
+        opacity: 0;
+      }
+      .c-bnr.bg::before {
+        background: rgba(156, 202, 239, 0.6);
+        width: 100%;
+        height: 100%;
+        transition: 1s;
+      }
+      .c-bnr.bg::after {
+        color: #fff;
+        content: "Read More";
+        font-size: 22px;
+        font-weight: bold;
+        display: flex;
+        text-align: center;
+        justify-content: center;
+        align-items: center;
+        bottom: 0;
+        right: 0;
+      }
+
+      .c-bnr.bg:hover::before,
+      .c-bnr.bg:hover::after {
+        opacity: 1;
+      }
+
+      .anim-box.fadeup.is-animated {
+        animation: fadeup 1s cubic-bezier(0.33, 1, 0.68, 1) 1 forwards;
+      }
+
+      @keyframes fadeup {
+        0% {
+          transform: translateY(30px);
+          opacity: 0;
+        }
+        80% {
+          opacity: 1;
+        }
+        100% {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
     </style>
 
     <title>Hello, world!</title>
@@ -165,13 +220,12 @@
     <!--navbarここから-->
 
     <div class="navbar-header mb-3 sticky-top" id="header">
-        
       <nav
         class="navbar navbar-expand-lg navbar-light ms-auto"
         style="background-color: #a8d0e6"
       >
         <div class="container">
-          <a class="navbar-brand" href="#">MAKEY</a>
+          <a class="navbar-brand text-white" href="#">MAKEY</a>
           <button
             class="navbar-toggler"
             type="button"
@@ -185,24 +239,24 @@
           </button>
 
           <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav text ms-auto">
+            <ul class="navbar-nav ms-auto">
               <li class="nav-item">
-                <a class="nav-link" href="#">HOME</a>
+                <a class="nav-link text-white" href="/">HOME</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#creators">CREATORS</a>
+                <a class="nav-link text-white" href="#creators">CREATORS</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#news">NEWS</a>
+                <a class="nav-link text-white" href="#news">NEWS</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#contact">CONTACT</a>
+                <a class="nav-link text-white" href="#contact">CONTACT</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#recruit">RECRUIT</a>
+                <a class="nav-link text-white" href="#recruit">RECRUIT</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#profile">PROFILE</a>
+                <a class="nav-link text-white" href="#profile">PROFILE</a>
               </li>
             </ul>
           </div>
@@ -227,18 +281,22 @@
       </div>
 
       <div class="row creator-list pfblock">
-        <div class="col-xs-6 col-sm-3 col-md-3 p-0">
-          <div class="col">
-            <div class="card h-100">
-              <img
-                src="https://makey.co.jp/assets/images/c_kobashiri0302.jpg"
-                class="card-img-top"
-                alt="..."
-              />
-              <div class="card-body">
-                <h5 class="card-title">Card title</h5>
-                <p class="card-text">This is a short card.</p>
-              </div>
+        
+          <div class="col-xs-6 col-sm-3 col-md-3 p-0">
+            <div class="col">
+              <div class="card h-100">
+                <div class="c-bnr bg">
+                  <img
+                    src="https://makey.co.jp/assets/images/c_kobashiri0302.jpg"
+                    class="card-img-top"
+                    alt="..."
+                  />
+                </div>
+                <div class="card-body">
+                  <h5 class="card-title">Card title</h5>
+                  <p class="card-text">This is a short card.</p>
+                </div>
+              
             </div>
           </div>
         </div>
@@ -326,11 +384,13 @@
         <div class="col-xs-6 col-sm-3 col-md-3 p-0">
           <div class="col">
             <div class="card h-100">
-              <img
-                src="https://makey.co.jp/assets/images/c_kobashiri0302.jpg"
-                class="card-img-top"
-                alt="..."
-              />
+              <div class="c-bnr bg">
+                <img
+                  src="https://makey.co.jp/assets/images/c_kobashiri0302.jpg"
+                  class="card-img-top"
+                  alt="..."
+                />
+              </div>
               <div class="card-body">
                 <h5 class="card-title">Card title</h5>
                 <p class="card-text">This is a short card.</p>
@@ -421,21 +481,19 @@
 
     <section class="pfblock gradation">
       <div class="container">
-        
-          <div class="center-block">
-            <div class="pfblock-header creator-entry">
-              <h2 class="pfblock-title white">新規クリエイター募集</h2>
-              <div class="pfblock-subtitle white">
-                MAKEY(メイキー)は、女性の美容系クリエイターをメインにサポートしている<br>YouTuberプロダクションです。
-                YouTubeでの活動をメインに、<br>クリエイターに合わせた活動を総合的にサポートします。
-                <a class="button-more b-entry" href="/creator-entry">
-                  応募ページはこちら &gt;
-                </a>
-              </div>
+        <div class="center-block">
+          <div class="pfblock-header creator-entry">
+            <h2 class="pfblock-title white">新規クリエイター募集</h2>
+            <div class="pfblock-subtitle white">
+              MAKEY(メイキー)は、女性の美容系クリエイターをメインにサポートしている<br />YouTuberプロダクションです。
+              YouTubeでの活動をメインに、<br />クリエイターに合わせた活動を総合的にサポートします。
+              <a class="button-more b-entry" href="/creator-entry">
+                応募ページはこちら &gt;
+              </a>
             </div>
           </div>
         </div>
-      
+      </div>
     </section>
 
     <script
